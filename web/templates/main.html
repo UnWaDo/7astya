@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div align="center" style="margin-top: 100px;">
+
+<h3> Шифровальщик </h3>
+<p> Внимание: символы, использующиеся в записи букв, будут заменены на # </p>
+<form action="" method="post" name="encode">
+
+	{{enc_form.hidden_tag()}}
+	{{enc_form.text(cols=80, rows=10)}}
+	<br>
+	<br>
+	<input type="submit" value="Зашифровать">
+
+</form>
+
+</div>
+<div align="center" style="margin-top: 100px;">
+
+<h3> Дешифровщик </h3>
+<form action="" method="post" name="decode">
+
+        {{dec_form.hidden_tag()}}
+        {{dec_form.encrypted(cols=80, rows=10)}}
+        <br>
+        <br>
+        <input type="submit" value="Дешифровать">
+
+</form>
+
+
+</div>
+
+
+</body>
+</html>
